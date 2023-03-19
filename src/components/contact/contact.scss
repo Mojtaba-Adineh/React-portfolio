@@ -1,0 +1,113 @@
+@import "../../global.scss";
+
+.contact {
+  background-color: white;
+  display: flex;
+
+  @include mobile{
+    flex-direction: column;
+  }
+
+  .left {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+
+    @include mobile{
+      margin-top: 20px;
+    }
+
+    h2 {
+      font-size: 32px;
+
+      @include mobile{
+        font-size: 20px;
+        height: 30px;
+      }
+    }
+
+    form {
+      width: 70%;
+      height: 70%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: column;
+
+      @include mobile{
+        height: 100%;
+      }
+
+      input {
+        width: 300px;
+        height: 30px;
+        font-size: 16px;
+        border-radius: 10px;
+        border: none;
+        padding: 5px;
+        box-shadow: 0 0 15px -1px rgba(220, 20, 60, 0.451);
+
+        @include mobile{
+          width: 200px;
+          height: 20px;
+        }
+        
+      }
+
+      textarea{
+        width: 300px;
+        height: 200px;
+        font-size: 16px;
+        border: none;
+        border-radius: 10px;
+        padding: 5px;
+        box-shadow: 0 0 15px -1px rgba(220, 20, 60, 0.451);
+
+        @include mobile{
+          width: 200px;
+          height: 100px;
+        }
+      }
+
+      textarea , input {
+        &::placeholder{
+            color: rgba(220, 20, 60, 0.337);
+        }
+
+        &:focus{
+            outline: none;
+        }
+      }
+
+      button{
+        width: 170px;
+        height: 35px;
+        color: white;
+        background-color: crimson;
+        border: none;
+        border-radius: 20px;
+        font-weight: 500;
+
+        &:hover{
+            box-shadow: 0 0 30px 1px crimson;
+        }
+      }
+    }
+    span{
+        color: rgb(24, 157, 0);
+    }
+  }
+}

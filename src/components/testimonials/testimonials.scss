@@ -1,0 +1,147 @@
+@import "../../global.scss";
+
+.testimonials {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  h1 {
+    font-size: 50px;
+    height: 65px;
+
+    @include mobile{
+      font-size : 20px;
+      height: 25px;
+    }
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mobile{
+      flex-direction : column;
+    }
+
+    .card {
+      width: 290px;
+      height: 70%;
+      box-shadow: 0 0 15px -8px black;
+      border-radius: 10px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      transition: all 1s ease;
+
+      @include mobile{
+        height : 130px;
+        width : 260px;
+        padding: 10px;
+        justify-content: space-between;
+      }
+
+      &.featured{
+        width: 310px;
+        height: 75%;
+        margin: 0 30px;
+
+        @include mobile{
+          width : 260px;
+          height : 130px;
+          margin : 20px 0 ;
+        }
+      }
+
+      &:hover{
+        transform: scale(1.05);
+      }
+
+      .top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          &.left,
+          &.right {
+            height: 30px;
+          }
+          &.user {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 30px;
+
+            @include mobile{
+              width: 40px;
+              height: 40px;
+            }
+          }
+        }
+      }
+
+      .center {
+        padding: 10px;
+        background: rgb(238, 174, 202);
+        background: radial-gradient(
+          circle,
+          rgba(238, 174, 202, 0.409) 0%,
+          rgba(148, 188, 233, 0.341) 100%
+        );
+        border-radius: 10px;
+
+        @include mobile{
+          font-size: 10px;
+          padding: 5px;
+        }
+      }
+
+      .bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        h3 {
+          margin-bottom: 5px;
+
+          @include mobile{
+            margin-top: 5px;
+            font-size: 14px;
+          }
+        }
+        h4 {
+          /* Fallback: Set a background color. */
+          background-color: red;
+
+          /* Create the gradient. */
+          background-image: linear-gradient(45deg, rgb(238, 174, 202), rgb(148, 188, 233) );
+
+          /* Set the background size and repeat properties. */
+          background-size: 100%;
+          background-repeat: repeat;
+
+          /* Use the text as a mask for the background. */
+          /* This will show the gradient as a text color rather than element bg. */
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          -moz-background-clip: text;
+          -moz-text-fill-color: transparent;
+
+          @include mobile{
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}
