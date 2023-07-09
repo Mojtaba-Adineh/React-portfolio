@@ -1,5 +1,10 @@
 import React from "react";
 import "./testimonials.scss";
+import twitterIcon from "../../assets/twitter.png"
+import youtubeIcon from "../../assets/youtube.png"
+import linkedinIcon from "../../assets/linkedin.png"
+import rightArrow from "../../assets/right-arrow.png"
+
 
 const Testimonials = () => {
   const peopleCard = [
@@ -8,7 +13,7 @@ const Testimonials = () => {
       name: "Tom Durden",
       title: "Senior Developer",
       img: "https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      icon: "assets/twitter.png",
+      icon: twitterIcon,
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem.",
     },
     {
@@ -16,7 +21,7 @@ const Testimonials = () => {
       name: "Alex Kalinski",
       title: "Co-Founder of DELKA",
       img: "https://images.pexels.com/photos/428321/pexels-photo-428321.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      icon: "assets/youtube.png",
+      icon: youtubeIcon,
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem recusandae perspiciatis ducimus vel hic temporibus. ",
       featured: true,
     },
@@ -25,7 +30,7 @@ const Testimonials = () => {
       name: "Martin Harold",
       title: "CEO of ALBI",
       img: "https://images.pexels.com/photos/3863793/pexels-photo-3863793.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      icon: "assets/linkedin.png",
+      icon: linkedinIcon,
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem",
     },
   ];
@@ -37,7 +42,7 @@ const Testimonials = () => {
         {peopleCard.map((person) => (
           <div className={person.featured ? "featured card" : "card"}>
             <div className="top">
-              <img className="left" src="assets/right-arrow.png" alt="" />
+              <img className="left" src={rightArrow} alt="" />
               <img
                 className="user"
                 src={person.img}

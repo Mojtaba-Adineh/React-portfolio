@@ -1,13 +1,15 @@
 import React from "react";
 import "./intro.scss";
 import Typed from "react-typed";
+import man from "../../assets/man.png"
+import downArrow from "../../assets/down.png"
 
 const Intro = () => {
   return (
     <div className="intro" id="intro">
       <div className="left">
         <div className="imgContainer">
-          <img src="../../assets/man.png" alt="" />
+          <img src={man} alt="" />
         </div>
       </div>
       <div className="right">
@@ -28,7 +30,7 @@ const Intro = () => {
           </h3>
         </div>
         <a href="#portfolio">
-          <img src="../../assets/down.png" alt="" />
+          <img src={downArrow} alt="" />
         </a>
       </div>
     </div>
